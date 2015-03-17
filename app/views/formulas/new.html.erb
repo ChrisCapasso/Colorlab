@@ -1,0 +1,17 @@
+<%= form_for @formula do |f| %>
+  <%= f.label :level %>:
+  <%= f.text_field  :level %><br />
+  <%= f.label :d_level %>:
+  <%= f.text_field :d_level %><br />
+
+  <%= f.submit %>
+<% end %>
+
+Your result is:
+<%=@result %>
+
+
+<%=form_tag "/formulas" do %>
+	<%= label_tag :level %>
+
+<% end %>
