@@ -1,4 +1,9 @@
 class FormulasController < ApplicationController
+	
+	def index
+		@formulas = Formula.all
+		end
+
 	def new
 		@formula = Formula.new
 	end
@@ -8,7 +13,7 @@ class FormulasController < ApplicationController
 		p params[:formula][:d_level].to_i
 		
 		@formula = Formula.new
-		@result = @formula.lift(params[:level].to_i, params[:formula][:d_level].to_i)
+		@result = @formula.lift(params[:formula][:level].to_i, params[:formula][:d_level].to_i)
 		p @result
 		
 		render "new"
@@ -23,9 +28,9 @@ class FormulasController < ApplicationController
 		# redirect_to root_path
 	end	
 
-	def show
-		render "create"
-	end
+	# def show
+	# 	render "create"
+	# end
 
 
 end

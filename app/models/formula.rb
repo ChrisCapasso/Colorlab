@@ -18,6 +18,3 @@ class Formula < ActiveRecord::Base
 	end
 end
 
-# formula = Formula.new
-# p formula.lift(2,6)	
-# end
