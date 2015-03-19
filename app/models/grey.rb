@@ -1,4 +1,7 @@
 class Grey < ActiveRecord::Base
+
+	attr_accessor :percent
+	
 	def greyfinder(percent = 0)
 		if percent == 100
 			"90% of mixture should be your Neutral tone."

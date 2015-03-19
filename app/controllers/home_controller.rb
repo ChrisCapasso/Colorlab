@@ -1,11 +1,14 @@
 class HomeController < ApplicationController
+	
 	def index
-		@formulas = Formula.all
 		@formula = Formula.new
+		@grey = Grey.new
+	
 	end
 
 	def new
 		@formula = Formula.new
+		@grey = Grey.new
 	end
 
 	def create
@@ -15,17 +18,12 @@ class HomeController < ApplicationController
 		@formula = Formula.new
 		@result = @formula.lift(params[:formula][:level].to_i, params[:formula][:d_level].to_i)
 		p @result
+
+		@grey = Grey.new
+		@grey_result = @grey.greyfinder(params[:grey][:percent].to_i)
+		p grey_result
 		
-		render "new"
-		# @formula.lift()
-		# puts params.inspect
-		# @result = @formula.lift(params[:level], params[:d_level])
-		#  puts @result
-		# # save
-		# # or error handling
-		# # render "new"
-		# # redirect_to "/formulas/new"
-		# redirect_to root_path
+		redirect_to root_path
 	end	
 
 end

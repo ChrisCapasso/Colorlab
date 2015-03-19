@@ -1,13 +1,21 @@
 <div class="form-group">
-<%= form_for @formula do |f| %>
+<% form_for @formula do |f| %>
   <%= f.label :level, "Current level" %>:
   <%= f.text_field :level %><br />
   <%= f.label :d_level, "Desired level" %>:
   <%= f.text_field :d_level %><br />
-
   <%= f.submit %>
 <% end %>
 
 </div>
 
+<div class="form-group">
+		<% form_for @grey do |f| %>
+	  <%= f.label :grey, "Amount of grey" %>:
+	  <%= f.text_field :grey %><br />
+	  <%= f.submit %>
+<% end %>
+
+
 <div class="lead">Your result is: <%= @result %></div>
+<div class="lead">Your result is: <%= @grey %></div>
