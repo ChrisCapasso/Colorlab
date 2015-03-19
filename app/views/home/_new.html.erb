@@ -1,13 +1,13 @@
 <div class="form-group">
 <%= form_for @formula do |f| %>
-  <%= f.label :level %>:
-  <%= f.text_field  "Current level" %><br />
-  <%= f.label :d_level %>:
-  <%= f.text_field "Desired level" %><br />
+  <%= f.label :level, "Current level" %>:
+  <%= f.text_field :level %><br />
+  <%= f.label :d_level, "Desired level" %>:
+  <%= f.text_field :d_level %><br />
 
   <%= f.submit %>
 <% end %>
 
-Your result is: <%=@result %>
-
 </div>
+
+<div class="lead">Your result is: <%= @result %></div>

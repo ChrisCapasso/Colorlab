@@ -16,16 +16,7 @@ class FormulasController < ApplicationController
 		@result = @formula.lift(params[:formula][:level].to_i, params[:formula][:d_level].to_i)
 		p @result
 		
-		render "new"
-		# @formula.lift()
-		# puts params.inspect
-		# @result = @formula.lift(params[:level], params[:d_level])
-		#  puts @result
-		# # save
-		# # or error handling
-		# # render "new"
-		# # redirect_to "/formulas/new"
-		# redirect_to root_path
+		redirect_to root_path
 	end	
 
 	# def show
