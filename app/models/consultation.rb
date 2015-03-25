@@ -1,5 +1,7 @@
 class Consultation
 
+	include ActiveModel::Model
+
 	attr_accessor :current_level, :desired_level, :percent_grey, :level, :tone
 
 	COLOR_GUIDE = {1 => {0 => "black", 1 => "blue black"}, 
@@ -14,13 +16,12 @@ class Consultation
 					10 => {0 => "Palest Natural Blonde", 1 => "Palest Ash Blonde", 3 => "Palest Golden Blonde", 8 => "Palest Violet Blonde"}}
 
 
-	# Consultation.new(current_level: 3, desired_level: 8, ...)
 	def initialize(options = {})
-		@current_level = options[:current_level] || 4
-		@desired_level = options[:desired_level] || 6
-		@percent_grey = options[:percent_grey] || 0
-		@level = options[:level] || 6
-		@tone = options[:tone] || 0
+		@current_level = options[:current_level].to_i || 4
+		@desired_level = options[:desired_level].to_i || 6
+		@percent_grey = options[:percent_grey].to_i || 0
+		@level = options[:level].to_i || 6
+		@tone = options[:tone].to_i || 0
 	end
 
 	def lift
@@ -37,25 +38,26 @@ class Consultation
 		end
 	end
 
-	def greyfinder
+	def grey_finder
 		if @percent_grey == 100
-			"90% of mixture should be your Neutral tone."
+			"90% of mixture should be your Neutral tone.  Use only 20 volume developer."
 		elsif @percent_grey == 75
-			"75% of mixture should be your Neutral tone."
+			"75% of mixture should be your Neutral tone.  Use only 20 Volume developer."
 		elsif @percent_grey == 50
 			"50% of mixture should be your Neutral tone."
 		elsif @percent_grey == 25
 			"25% of mixture should be your Neutral tone."
 		else @percent_grey == 0
-			"No added Neutral tone necessary tone."
+			"No added Neutral tone necessary."
 		end
 	end
 
 	def color_finder
-		COLOR_GUIDE[@current_level][@tone]
+		COLOR_GUIDE[@desired_level][@tone]
 	end
 
 	def american_color_finder
-		color_finder(@current_level - 1, @tone)
+		current_level = @current_level - 1
+		COLOR_GUIDE[current_level][@tone]
 	end
 end

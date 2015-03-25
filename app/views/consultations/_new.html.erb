@@ -1,0 +1,13 @@
+<h1>Create a consultation below</h1>
+<div class="form-group">
+<%= form_for @consultation, url: result_path, method: :get do |f| %>
+  <%= f.label :current_level, "Current level" %>:
+  <%= f.text_field :current_level %><br />
+  <%= f.label :desired_level, "Desired level" %>:
+  <%= f.text_field :desired_level %><br />
+  <%= f.label :percent_grey, "Amount of grey" %>:
+  <%= f.text_field :percent_grey %><br />
+  <%= f.submit %>
+<% end %>
+
+</div>

@@ -10,7 +10,13 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require bootstrap_and_overrides
  *= require_tree .
  *= require_self
  */
+#title { font-family: 'Josefin Slab', serif;
+		 font-weight: 700; 
+		font-size: 70px}
+
+body {	font-family: 'Open Sans', sans-serif;
+
+}
