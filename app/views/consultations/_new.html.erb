@@ -1,13 +1,17 @@
-<h1>Create a consultation below</h1>
-<div class="form-group">
-<%= form_for @consultation, url: result_path, method: :get do |f| %>
-  <%= f.label :current_level, "Current level" %>:
-  <%= f.text_field :current_level %><br />
-  <%= f.label :desired_level, "Desired level" %>:
-  <%= f.text_field :desired_level %><br />
-  <%= f.label :percent_grey, "Amount of grey" %>:
-  <%= f.text_field :percent_grey %><br />
-  <%= f.submit %>
-<% end %>
+<div class="container" id="full">
+	<h1>Create a consultation below</h1>
+	<div class="form-group">
+	<%= form_for @consultation, url: result_path, method: :get do |f| %>
+	  <%= f.label :current_level, "Current level"%>
+	  <%= f.select(:current_level, [['Black', 1], ['Darkest Brown', 2], ['Dark Brown', 3], ['Medium Brown', 4], ['Light Brown', 5], ['Dark Blonde', 6], ['Medium Blonde', 7], ['Light Blonde', 8], ['Lightest Blonde', 9], ['Palest Blonde', 10]], {}, {class: "form-control"}) %><br />
+	  <%= f.label :desired_level, "Desired level" %>:
+	<%= f.select(:desired_level, [['Black', 1], ['Darkest Brown', 2], ['Dark Brown', 3], ['Medium Brown', 4], ['Light Brown', 5], ['Dark Blonde', 6], ['Medium Blonde', 7], ['Light Blonde', 8], ['Lightest Blonde', 9], ['Palest Blonde', 10]], {}, {class: "form-control"}) %><br />
+	  <%= f.label :percent_grey, "Percentage of Grey Hair" %>
+	  <%= f.select(:percent_grey, [['None', 0], ['25% Grey Hair', 25], ['50% Grey Hair', 50], ['75% Grey Hair', 75], ['100% Grey Hair', 100]], {}, {class: "form-control"}) %>
+	<% end %>
+	</div>
+</div>
+
+	<button type="submit" class="btn btn-info btn-block">Formulate.</button>
 
 </div>

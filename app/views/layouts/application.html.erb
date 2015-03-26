@@ -7,11 +7,17 @@
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<header id="title">ColorLab.</header>
-
-<%= yield %>
-
+	<div class="wrapper">
+		<img src="/assets/background_hair.jpg" class="img-responsive">
+		<div id="open_sans">
+			<header class="page-header" id="title">ColorLab.</header>
+			<%= yield %>
+		</div>
+	</div>
 </body>
 </html>

@@ -3,7 +3,6 @@ class Consultation
 	include ActiveModel::Model
 
 	attr_accessor :current_level, :desired_level, :percent_grey, :level, :tone
-
 	COLOR_GUIDE = {1 => {0 => "black", 1 => "blue black"}, 
 				   2 => {0 => "Darkest Natural Brown", 1 => "Darkest Ash Brown"},
 					3 => {0 => "Dark Natural Brown", 1 => "Dark Ash Brown", 4 => "Dark Red Brown", 5 => "Dark Burgundy Brown"},
@@ -50,6 +49,10 @@ class Consultation
 		else @percent_grey == 0
 			"No added Neutral tone necessary."
 		end
+	end
+
+	def image
+		"#{@desired_level}.jpg"
 	end
 
 	def color_finder
