@@ -12,11 +12,14 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="wrapper">
-		<div id="open_sans">
-			<header class="page-header" id="title">ColorLab.
-				<img src="/assets/background_hair.jpg" id="back" class="img-responsive">
-			</header>
+	<div id="mycarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="item active">
+        <img src="/assets/background_hair.jpg" alt="" class="img-responsive">
+           <div class="carousel-caption">ColorLab.</div>
+        </div>
+    </div>
+</div>
 			<%= yield %>
 		</div>
 	</div>
