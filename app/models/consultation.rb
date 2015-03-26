@@ -25,13 +25,13 @@ class Consultation
 
 	def lift
 		if @desired_level - @current_level == 1
-			"Use #{@desired_level} with 20 Volume developer"
+			"Use Level #{@desired_level} with 20 Volume developer"
 		elsif @desired_level - @current_level == 2
-			"Use #{@desired_level} with 30 Volume developer and add 1\" of Blue or Ash Additive"
+			"Use Level #{@desired_level} with 30 Volume developer and add 1\" of Blue or Ash Additive"
 		elsif @desired_level - @current_level == 3
-			"Use #{@desired_level + 1} with 40 Volume developer and add 2\" of Blue or Ash Additive"
+			"Use Level #{@desired_level + 1} with 40 Volume developer and add 2\" of Blue or Ash Additive"
 		elsif @desired_level - @current_level == 4  
-			"Use #{@desired_level + 1} with 40 Volume developer and add 2\" of Blue or Ash Additive, but uncontrolled gold will be present"
+			"Use Level #{@desired_level + 1} with 40 Volume developer and add 2\" of Blue or Ash Additive, but uncontrolled gold will be present"
 		else
 			"Prelighten by a professional if you are unable to safely use lightener."
 		end
