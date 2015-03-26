@@ -31,8 +31,9 @@
 #open_sans {	font-family: 'Open Sans', sans-serif;
 }
 
-/*.wrapper{background: url('images/background_hair.jpg') no-repeat   center center fixed;
+.back {background: no-repeat   center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
-background-size: cover;}*/
+background-size: cover;
+}

@@ -1,5 +1,5 @@
 <div class="container"><div class="lead">Your shade name is: <%= @consultation.color_finder %></div>
-<div class="lead">Amount of neutral for grey coverage: <%= @consultation.grey_finder %></div>
+<div class="lead">Amount of neutral necessary for grey coverage: <%= @consultation.grey_finder %></div>
 <div class="lead">Lightening: <%= @consultation.lift %></div>
-<img src="/assets/5N.jpg" class="img-circle center-block" width="100" height="100">
+<%= image_tag(@consultation.image, :class => "img-circle center-block", :size => "100x100")   %>
 </div>
