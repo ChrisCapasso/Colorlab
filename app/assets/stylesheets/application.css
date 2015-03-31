@@ -13,28 +13,24 @@
  *= require_tree .
  *= require_self
  */
-.carousel-caption { font-family: 'Josefin Slab', serif;
+.title { font-family: 'Josefin Slab', serif;
 		 font-weight: 700;
+		font-size: 80px;
+
 		/*Gold foil typeface*/
-			font-size: 90px;
+		color:	#D5AD6D;
+		background: -webkit-linear-gradient(transparent, transparent),
+        -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%,
+        rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+		background: -o-linear-gradient(transparent, transparent);
+		-webkit-background-clip: text;
+  		-webkit-text-fill-color: transparent;
+  	}
+
+.opensans {	font-family: 'Open Sans', sans-serif;
+	}
+
+.background {background: no-repeat   center center fixed;
 			width: 100%;
-			margin-left: 50px;
-			color: #D5AD6D;    
-		    background: -webkit-linear-gradient(transparent, transparent),
-	        -webkit-linear-gradient(top,
-	        rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%,
-	        rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%,
-	        rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
-		    -webkit-background-clip: text;
-		    -webkit-text-fill-color: transparent;
-}
-
-#open_sans {	font-family: 'Open Sans', sans-serif;
-}
-
-/*.back {background: no-repeat   center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}*/
+			background-size: cover;
+	}

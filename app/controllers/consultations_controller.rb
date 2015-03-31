@@ -1,5 +1,9 @@
 class ConsultationsController < ApplicationController
 	
+	def show
+	
+	end
+
 	def index
 		@consultation = Consultation.new
 		@grey = @consultation.percent_grey

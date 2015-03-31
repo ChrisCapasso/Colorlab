@@ -10,18 +10,15 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-	<div id="mycarousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="item active">
-        <img src="/assets/background_hair.jpg" alt="" class="img-responsive">
-           <div class="carousel-caption">ColorLab.</div>
+  <body class="opensans">
+    <div class="container">
+      <div class="page-header"><h1 class="title">ColorLab.</h1></div>
+        <div class="jumbotron">
+          <img src="/assets/background_hair.jpg" alt="" class="img-responsive" id="background">
         </div>
     </div>
-</div>
-			<%= yield %>
-		</div>
-	</div>
-</body>
+  			<%= yield %>
+  </body>
 </html>
