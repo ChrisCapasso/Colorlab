@@ -7,11 +7,11 @@
 			  <%= f.label :desired_level, "Desired level" %>:
 			  <%= f.select(:desired_level, [['Black', 1], ['Darkest Brown', 2], ['Dark Brown', 3], ['Medium Brown', 4], ['Light Brown', 5], ['Dark Blonde', 6], ['Medium Blonde', 7], ['Light Blonde', 8], ['Lightest Blonde', 9], ['Palest Blonde', 10]], {}, {class: "form-control"}) %><br />
 			  <%= f.label :tone, "Desired tone" %>:
-			  <%= f.select(:tone, [['Neutral', 0], ['Ash', 1], ['Gold', 3], ['Red', 4], ['Copper', 43], ['Red Violet', 5], ['Pearl', 8], ['Light Blonde', 8]], {}, {class: "form-control"}) %><br />
+			  <%= f.select(:tone, [['Neutral', 0], ['Ash', 1], ['Gold', 3], ['Red', 4], ['Copper', 43], ['Red Violet', 5], ['Pearl', 8]], {}, {class: "form-control"}) %><br />
 			  <%= f.label :percent_grey, "Percentage of Grey Hair" %>
 			  <%= f.select(:percent_grey, [['None', 0], ['25% Grey Hair', 25], ['50% Grey Hair', 50], ['75% Grey Hair', 75], ['100% Grey Hair', 100]], {}, {class: "form-control"}) %><br />
 			  <%= f.submit 'Formulate.', :class => "btn btn-info btn-block" %> <br/><br/>
 		<% end %>
 		</div>
-	<a href="/show" class="lead">Confused? Click here to learn about levels and grey.</a>
+	<a href="/show" class="lead">New? Click here to learn about levels and grey.</a>
 </div>

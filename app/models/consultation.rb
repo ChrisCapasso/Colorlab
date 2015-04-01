@@ -3,8 +3,8 @@ class Consultation
 	include ActiveModel::Model
 
 	attr_accessor :current_level, :desired_level, :percent_grey, :level, :tone
-	COLOR_GUIDE = {1 => {0 => "black", 1 => "blue black"}, 
-				   2 => {0 => "Darkest Natural Brown", 1 => "Darkest Ash Brown"},
+	COLOR_GUIDE = {1 => {0 => "black", 1 => "blue black", 3 => "Tone does not exist at this level", 4 => "Tone does not exist at this level", 43 => "Tone does not exist at this level", 5 => "Tone does not exist at this level", 8 => "Tone does not exist at this level"}, 
+				   2 => {0 => "Darkest Natural Brown", 1 => "Darkest Ash Brown", 3 => "Tone does not exist at this level", 4 => "Tone does not exist at this level", 43 => "Tone does not exist at this level", 5 => "Tone does not exist at this level", 8 => "Tone does not exist at this level"},
 					3 => {0 => "Dark Natural Brown", 1 => "Dark Ash Brown", 3 => "Tone does not exist at this level", 4 => "Dark Red Brown", 43 => "Tone does not exist at this level", 5 => "Dark Burgundy Brown", 8 => "Tone does not exist at this level"},
 					4 => {0 => "Medium Natural Brown", 1 => "Medium Ash Brown", 3 => "Medium Golden Brown", 4 => "Medium Redish Brown", 43 => "Tone does not exist at this level", 5 => "Medium Burgundy Brown", 8 => "Tone does not exist at this level"},
 					5 => {0 => "Light Natural Brown", 1 => "Light Ash Brown", 3 => "Light Golden Brown", 43 => "Light Copper Brown", 4 => "Light Red Brown", 5 => "Light Burgundy Brown", 8 => "Tone does not exist at this level"},
@@ -24,7 +24,7 @@ class Consultation
 	end
 
 	def lift
-		if @desired_level - @current_level == 1
+		if @desired_level - @current_level == 1 || 0
 			"Use Level #{@desired_level} with 20 Volume developer"
 		elsif @desired_level - @current_level == 2
 			"Use Level #{@desired_level} with 30 Volume developer and add 1\" of Blue or Ash Additive"
@@ -54,11 +54,6 @@ class Consultation
 	def image
 		"#{@desired_level}.jpg"
 	end
-
-	def display_colors
-		@level = Dir.glob("app/assets/images/*.jpg")
-	end
-
 
 	def color_finder
 		COLOR_GUIDE[@desired_level][@tone]
