@@ -24,7 +24,9 @@ class Consultation
 	end
 
 	def lift
-		if @desired_level - @current_level == 1 || 0
+		if @desired_level - @current_level == 0
+			"Use Level #{@desired_level} with 10 Volume developer"
+		elsif @desired_level - @current_level == 1
 			"Use Level #{@desired_level} with 20 Volume developer"
 		elsif @desired_level - @current_level == 2
 			"Use Level #{@desired_level} with 30 Volume developer and add 1\" of Blue or Ash Additive"
